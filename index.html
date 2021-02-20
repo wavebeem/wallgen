@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>wallgen</title>
+  <script type="module" src="wallgen-app-element.js"></script>
+  <style>
+    html {
+      font-family: sans-serif;
+      background: #222;
+      color: #ccc;
+    }
+
+    :any-link{
+      color: #fff;
+    }
+
+    wallgen-app {
+      display: block;
+    }
+
+    wallgen-app canvas {
+      max-width: 100%;
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <h1>Wallgen</h1>
+  <wallgen-app>
+    Loading...
+  </wallgen-app>
+  <template id="wallgen-app-element">
+    <a>Download</a>
+    <canvas width="0" height="0"></canvas>
+  </template>
+</body>
+</html>
