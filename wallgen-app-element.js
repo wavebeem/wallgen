@@ -22,7 +22,7 @@ class WallgenAppElement extends HTMLElement {
     this._ctx = this.querySelector("canvas").getContext("2d");
     this._ctx.canvas.width = screen.width * devicePixelRatio;
     this._ctx.canvas.height = screen.height * devicePixelRatio;
-    this._download = this.querySelector("a");
+    this._download = this.querySelector("button");
     this._draw();
   }
 
@@ -44,8 +44,16 @@ class WallgenAppElement extends HTMLElement {
         ctx.fill();
       }
     }
-    this._download.download = `wallgen-${getDate()}.png`;
-    this._download.href = ctx.canvas.toDataURL();
+    this._download.onclick = () => {
+      const name = `wallgen-${getDate()}.png`;
+      const a = document.createElement("a");
+      a.download = name;
+      a.href = ctx.canvas.toDataURL();
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    };
+    this.querySelector("span").textContent = `${w}×${h}`;
   }
 }
 

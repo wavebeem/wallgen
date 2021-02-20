@@ -1,61 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>wallgen</title>
-  <script type="module" src="wallgen-app-element.js"></script>
-  <style>
-    html {
-      font-family: sans-serif;
-      background: #222;
-      color: #ccc;
-    }
-
-    *{
-      box-sizing: border-box;
-    }
-
-    body {
-      display: grid;
-      grid-gap: 2rem;
-      padding: 2rem;
-      margin: 0;
-      font-size: 1.25rem;
-    }
-
-    h1 {
-      margin: 0;
-    }
-
-    :any-link{
-      color: #fff;
-    }
-
-    wallgen-app {
-      display: grid;
-      grid-gap: 2rem;
-    }
-
-    wallgen-app canvas {
-      max-width: 100%;
-      border: 2px solid;
-      border-radius: 4px;
-    }
-  </style>
-</head>
-<body>
-  <h1>wallgen</h1>
-  <wallgen-app>
-    Loading...
-  </wallgen-app>
-  <footer>
-    &copy; 2021 <a href="https://www.wavebeem.com">Brian Mock</a>
-  </footer>
-  <template id="wallgen-app-element">
-    <a>Download</a>
-    <canvas width="0" height="0"></canvas>
-  </template>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wallgen</title>
+    <script type="module" src="wallgen-app-element.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>wallgen</h1>
+    <wallgen-app> Loading... </wallgen-app>
+    <footer>
+      &copy; 2021 <a href="https://www.wavebeem.com">Brian Mock</a>
+    </footer>
+    <template id="wallgen-app-element">
+      <div>
+        <button type="button">Download</button>
+        <span></span>
+      </div>
+      <canvas width="0" height="0"></canvas>
+    </template>
+  </body>
 </html>

@@ -1,0 +1,64 @@
+html {
+  font-family: sans-serif;
+  background: #222;
+  color: #aaa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-gap: 2rem;
+  padding: 2rem;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+:any-link {
+  color: #fff;
+}
+
+:any-link:hover {
+  color: #ccc;
+}
+
+wallgen-app {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+wallgen-app button {
+  margin-right: 1rem;
+  width: max-content;
+  background: #ccc;
+  color: #222;
+  border: 0;
+  border-radius: 4px;
+  font: inherit;
+  padding: 0.5rem 1rem;
+}
+
+wallgen-app button:hover {
+  background: #fff;
+}
+
+wallgen-app button:focus {
+  outline: 2px solid;
+  outline-offset: -4px;
+}
+
+wallgen-app button:active {
+  transform: scale(0.95);
+}
+
+wallgen-app canvas {
+  max-width: 100%;
+  border: 2px solid;
+  border-radius: 4px;
+}
