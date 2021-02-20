@@ -13,17 +13,35 @@
       color: #ccc;
     }
 
+    *{
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      grid-gap: 2rem;
+      padding: 2rem;
+      margin: 0;
+      font-size: 1.25rem;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
     :any-link{
       color: #fff;
     }
 
     wallgen-app {
-      display: block;
+      display: grid;
+      grid-gap: 2rem;
     }
 
     wallgen-app canvas {
       max-width: 100%;
-      border: 1px solid;
+      border: 2px solid;
+      border-radius: 4px;
     }
   </style>
 </head>
@@ -32,6 +50,9 @@
   <wallgen-app>
     Loading...
   </wallgen-app>
+  <footer>
+    &copy; 2021 <a href="https://www.wavebeem.com">Brian Mock</a>
+  </footer>
   <template id="wallgen-app-element">
     <a>Download</a>
     <canvas width="0" height="0"></canvas>
